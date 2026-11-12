@@ -1,0 +1,10 @@
+{
+  "name": "Noakhali Kitchen Prayer Times",
+  "description": "Mobile-first offline prayer times, Qibla compass, Ramadan schedule, and authentic Bangladeshi meal ideas for families across the USA.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
