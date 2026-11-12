@@ -262,7 +262,7 @@ export const SEO_CITIES: Record<string, SeoCity> = {
     timeZone: 'America/Los_Angeles',
     intro:
       'Southern California’s bustling metropolitan basin includes the officially designated "Little Bangladesh" neighborhood along 3rd Street in central Los Angeles. Landmark centers including the Islamic Center of Southern California on Vermont Ave and King Fahad Mosque in Culver City serve a cosmopolitan community. Year-round Pacific sun and mild coastal weather provide steady prayer routines for thousands of Angelenos.',
-    nearbySlugs: ['san-diego-ca', 'san-jose-ca', 'san-francisco-ca', 'phoenix-az'],
+    nearbySlugs: ['san-francisco-ca', 'seattle-wa', 'houston-tx', 'dallas-tx'],
     prominentMosques: [
       'Islamic Center of Southern California (ICSC)',
       'King Fahad Mosque (Culver City)',
@@ -279,6 +279,35 @@ export const SEO_CITIES: Record<string, SeoCity> = {
     banglaTitle: 'লস অ্যাঞ্জেলেস, ক্যালিফোর্নিয়া নামাজের সময়সূচী',
   },
 
+  'san-francisco-ca': {
+    slug: 'san-francisco-ca',
+    name: 'San Francisco',
+    state: 'California',
+    stateCode: 'CA',
+    country: 'United States',
+    countryCode: 'US',
+    latitude: 37.7749,
+    longitude: -122.4194,
+    timeZone: 'America/Los_Angeles',
+    intro:
+      'Spanning the Bay Area peninsula and neighboring Oakland, Berkeley, and Silicon Valley, San Francisco is home to a growing community of Bangladeshi tech professionals, students, and multi-generational Muslim families. Historic neighborhood masajid including the Islamic Center of San Francisco on Howard Street and Masjid Darussalam serve daily congregants across the city. Coastal fog and Pacific daylight shifts are factored smoothly into our daily Fajr, Maghrib, and Qibla calculations.',
+    nearbySlugs: ['los-angeles-ca', 'seattle-wa', 'houston-tx', 'new-york-ny'],
+    prominentMosques: [
+      'Islamic Center of San Francisco (ICSF, Howard St)',
+      'Masjid Al-Tawheed (San Francisco)',
+      'Masjid Darussalam (SF Tenderloin)',
+      'Muslim Community Center of East Bay (MCC)',
+    ],
+    halalHubs: [
+      'Tenderloin & Mission Street halal Pakistani/Indian/Bangla dining',
+      'Fremont & Hayward Little Kabul & Deshi groceries',
+      'Berkeley & Oakland Shattuck Ave halal spots',
+    ],
+    metaDescription:
+      'Today’s Muslim prayer times in San Francisco, CA & the Bay Area. Live next prayer countdown, accurate Qibla compass, Hanafi/ISNA options, and meal ideas.',
+    banglaTitle: 'সান ফ্রান্সিসকো, ক্যালিফোর্নিয়া নামাজের সময়সূচী',
+  },
+
   'seattle-wa': {
     slug: 'seattle-wa',
     name: 'Seattle',
@@ -291,7 +320,7 @@ export const SEO_CITIES: Record<string, SeoCity> = {
     timeZone: 'America/Los_Angeles',
     intro:
       'Nestled in the Pacific Northwest, Seattle’s Muslim population spans technology professionals and established families across King and Snohomish counties from Bellevue to Redmond and Lynnwood. Centers like the Islamic Center of Washington (ICW) and MAPS (Muslim Association of Puget Sound) provide state-of-the-art facilities. High-latitude adjustments built into our calculations ensure accurate Fajr and Isha timings during Washington’s extended summer solstices.',
-    nearbySlugs: ['portland-or', 'vancouver-bc', 'spokane-wa', 'boise-id'],
+    nearbySlugs: ['san-francisco-ca', 'los-angeles-ca', 'minneapolis-mn', 'chicago-il'],
     prominentMosques: [
       'Muslim Association of Puget Sound (MAPS, Redmond)',
       'Islamic Center of Seattle (Northgate)',
@@ -622,6 +651,35 @@ export const SEO_CITIES: Record<string, SeoCity> = {
     halalHubs: ['Wurzbach Road Mediterranean strip', 'Babcock Road halal markets'],
     metaDescription: 'San Antonio, TX prayer times today with live countdown and Qibla direction.',
     banglaTitle: 'সান আন্তোনিও, টেক্সাস নামাজের সময়সূচী',
+  },
+
+  'toronto-ca': {
+    slug: 'toronto-ca',
+    name: 'Toronto',
+    state: 'Ontario',
+    stateCode: 'ON',
+    country: 'Canada',
+    countryCode: 'CA',
+    latitude: 43.6532,
+    longitude: -79.3832,
+    timeZone: 'America/Toronto',
+    intro:
+      'Toronto and the Greater Toronto Area (GTA)—including Scarborough, Danforth’s famed "Bangla Town," and Mississauga—host one of the largest Bangladeshi and Muslim populations in North America. Landmark institutions such as Masjid Toronto, the Islamic Foundation of Toronto, and Baitul Aman Masjid serve daily congregations and festive Ramadan taraweeh prayers. High-latitude adjustments ensure accurate Fajr and Isha timings throughout Ontario’s long summer daylight hours and short winter days.',
+    nearbySlugs: ['detroit-mi', 'new-york-ny', 'boston-ma', 'chicago-il'],
+    prominentMosques: [
+      'Islamic Foundation of Toronto (Scarborough)',
+      'Masjid Toronto (Dundas & Adelaide)',
+      'Baitul Aman Jame Masjid (Danforth Bangla Town)',
+      'Jami Mosque (High Park)',
+    ],
+    halalHubs: [
+      'Danforth Ave & Victoria Park (Toronto Bangla Town)',
+      'Lawrence Ave East & Birchmount (Scarborough halal strip)',
+      'Gerrard India Bazaar & Thorncliffe Park',
+    ],
+    metaDescription:
+      'Today’s Muslim prayer times in Toronto, Canada (Scarborough, Danforth, GTA). Live next prayer countdown, accurate Qibla compass, Hanafi/ISNA options, and meal ideas.',
+    banglaTitle: 'টরন্টো, কানাডা নামাজের সময়সূচী',
   },
 };
 

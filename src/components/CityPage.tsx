@@ -157,7 +157,7 @@ export const CityPage: React.FC<CityPageProps> = ({
             '@type': 'PostalAddress',
             'addressLocality': city.name,
             'addressRegion': city.stateCode,
-            'addressCountry': 'US',
+            'addressCountry': city.countryCode || 'US',
           },
           'geo': {
             '@type': 'GeoCoordinates',
@@ -216,7 +216,7 @@ export const CityPage: React.FC<CityPageProps> = ({
             <div className="flex items-center gap-2 text-xs text-emerald-700 dark:text-emerald-400 font-semibold tracking-wide uppercase">
               <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               <span>
-                {city.state} · {city.timeZone.replace('America/', '')} Time Zone
+                {city.state}{city.countryCode !== 'US' ? `, ${city.country}` : ''} · {city.timeZone.replace('America/', '').replace(/_/g, ' ')} Time Zone
               </span>
               <span aria-hidden="true" className="text-slate-300 dark:text-stone-700">·</span>
               <span className="font-bangla">{city.banglaTitle}</span>

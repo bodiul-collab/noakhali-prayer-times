@@ -56,6 +56,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.noakhalikitchen.com/prayer-times/san-francisco-ca</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.noakhalikitchen.com/prayer-times/seattle-wa</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -134,5 +139,10 @@
     <loc>https://www.noakhalikitchen.com/prayer-times/san-antonio-tx</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.noakhalikitchen.com/prayer-times/toronto-ca</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

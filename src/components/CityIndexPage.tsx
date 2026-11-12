@@ -27,7 +27,15 @@ export const CityIndexPage: React.FC<CityIndexPageProps> = ({ onNavigate }) => {
     const q = searchQuery.toLowerCase().trim();
     return allFeaturedCities.filter((city) => {
       if (!q) return true;
+      const fullLabel = `${city.name}, ${city.stateCode}`.toLowerCase();
+      const fullNoComma = `${city.name} ${city.stateCode}`.toLowerCase();
+      const countryLabel = `${city.name}, ${city.country}`.toLowerCase();
+      const countryNoComma = `${city.name} ${city.country}`.toLowerCase();
       return (
+        fullLabel.includes(q) ||
+        fullNoComma.includes(q) ||
+        countryLabel.includes(q) ||
+        countryNoComma.includes(q) ||
         city.name.toLowerCase().includes(q) ||
         city.state.toLowerCase().includes(q) ||
         city.stateCode.toLowerCase().includes(q) ||
@@ -75,7 +83,7 @@ export const CityIndexPage: React.FC<CityIndexPageProps> = ({ onNavigate }) => {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search by city, state, or metro area (e.g. Houston, New York, Detroit)..."
+            placeholder="Search by city, state, or country (e.g. Houston, New York, Toronto, Detroit)..."
             className="w-full pl-10 pr-4 py-3 rounded-2xl bg-slate-100 dark:bg-stone-800 border border-transparent focus:border-emerald-600 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-600/30"
           />
           {searchQuery && (
@@ -109,11 +117,11 @@ export const CityIndexPage: React.FC<CityIndexPageProps> = ({ onNavigate }) => {
             >
               <div>
                 <div className="flex items-center justify-between text-xs text-slate-400 dark:text-stone-500 mb-1">
-                  <span>{city.state}</span>
+                  <span>{city.countryCode !== 'US' ? `${city.state}, ${city.country}` : city.state}</span>
                   <span className="font-mono">{city.stateCode}</span>
                 </div>
                 <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
-                  {city.name}
+                  {city.name}, {city.stateCode}
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-stone-400 mt-1 line-clamp-2">
                   {city.intro}

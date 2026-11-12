@@ -553,10 +553,12 @@ export default function App() {
                   { slug: 'chicago-il', name: 'Chicago, IL' },
                   { slug: 'atlanta-ga', name: 'Atlanta, GA' },
                   { slug: 'los-angeles-ca', name: 'Los Angeles, CA' },
+                  { slug: 'san-francisco-ca', name: 'San Francisco, CA' },
                   { slug: 'seattle-wa', name: 'Seattle, WA' },
                   { slug: 'minneapolis-mn', name: 'Minneapolis, MN' },
                   { slug: 'philadelphia-pa', name: 'Philadelphia, PA' },
                   { slug: 'boston-ma', name: 'Boston, MA' },
+                  { slug: 'toronto-ca', name: 'Toronto, Canada' },
                 ].map((c) => (
                   <button
                     key={c.slug}
