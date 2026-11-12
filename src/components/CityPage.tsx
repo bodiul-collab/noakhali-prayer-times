@@ -210,11 +210,11 @@ export const CityPage: React.FC<CityPageProps> = ({
       </nav>
 
       {/* Main City Header Banner with H1 and Tailored Intro */}
-      <div className="rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 p-6 md:p-8 shadow-xs">
+      <div className="rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 p-4 sm:p-6 md:p-8 shadow-xs overflow-hidden">
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs text-emerald-700 dark:text-emerald-400 font-semibold tracking-wide uppercase">
-              <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+          <div className="space-y-2 min-w-0">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs text-emerald-700 dark:text-emerald-400 font-semibold tracking-wide uppercase">
+              <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
               <span>
                 {city.state}{city.countryCode !== 'US' ? `, ${city.country}` : ''} · {city.timeZone.replace('America/', '').replace(/_/g, ' ')} Time Zone
               </span>

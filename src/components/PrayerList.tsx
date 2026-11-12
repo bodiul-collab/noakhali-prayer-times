@@ -19,8 +19,8 @@ const PRAYER_ICONS: Record<PrayerName, React.ReactNode> = {
 export const PrayerList: React.FC<PrayerListProps> = ({ prayers, asrMadhab }) => {
   return (
     <div className="rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 shadow-sm overflow-hidden">
-      <div className="px-5 py-4 border-b border-slate-100 dark:border-stone-800 flex items-center justify-between">
-        <div>
+      <div className="px-4 sm:px-5 py-4 border-b border-slate-100 dark:border-stone-800 flex items-center justify-between gap-2">
+        <div className="min-w-0">
           <h3 className="text-base font-bold text-slate-900 dark:text-white">
             Today's Prayer Schedule
           </h3>
@@ -28,7 +28,7 @@ export const PrayerList: React.FC<PrayerListProps> = ({ prayers, asrMadhab }) =>
             আজকের নামাজের সময়সূচী
           </p>
         </div>
-        <div className="text-xs text-slate-500 dark:text-stone-400 font-medium">
+        <div className="text-xs text-slate-500 dark:text-stone-400 font-medium shrink-0">
           Asr: <span className="text-emerald-700 dark:text-emerald-400 font-semibold">{asrMadhab === 'hanafi' ? 'Hanafi' : 'Standard'}</span>
         </div>
       </div>
@@ -42,7 +42,7 @@ export const PrayerList: React.FC<PrayerListProps> = ({ prayers, asrMadhab }) =>
           return (
             <div
               key={prayer.id}
-              className={`flex items-center justify-between px-5 py-3.5 transition-colors min-h-[58px] ${
+              className={`flex items-center justify-between gap-2 px-3.5 sm:px-5 py-3.5 transition-colors min-h-[58px] ${
                 isNext
                   ? 'bg-emerald-50/80 dark:bg-emerald-950/40 border-l-4 border-l-emerald-600 dark:border-l-emerald-500'
                   : isCurrent
@@ -51,9 +51,9 @@ export const PrayerList: React.FC<PrayerListProps> = ({ prayers, asrMadhab }) =>
               }`}
             >
               {/* Left Slot: Icon + Prayer Names */}
-              <div className="flex items-center gap-3.5">
+              <div className="flex items-center gap-3 min-w-0 flex-1">
                 <div
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 ${
                     isNext
                       ? 'bg-emerald-600 text-white shadow-sm'
                       : isPassed
@@ -62,16 +62,16 @@ export const PrayerList: React.FC<PrayerListProps> = ({ prayers, asrMadhab }) =>
                   }`}
                 >
                   {isNext ? (
-                    <BellRing className="w-5 h-5 animate-bounce" />
+                    <BellRing className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce" />
                   ) : (
                     PRAYER_ICONS[prayer.id]
                   )}
                 </div>
 
-                <div>
-                  <div className="flex items-baseline gap-2">
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
                     <span
-                      className={`text-base font-bold ${
+                      className={`text-sm sm:text-base font-bold ${
                         isNext
                           ? 'text-emerald-900 dark:text-emerald-300'
                           : isPassed
@@ -81,24 +81,24 @@ export const PrayerList: React.FC<PrayerListProps> = ({ prayers, asrMadhab }) =>
                     >
                       {prayer.nameEn}
                     </span>
-                    <span className="text-sm font-bangla font-medium text-slate-500 dark:text-stone-400">
+                    <span className="text-xs sm:text-sm font-bangla font-medium text-slate-500 dark:text-stone-400">
                       {prayer.nameBn}
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400 dark:text-stone-500">
+                  <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] sm:text-xs text-slate-400 dark:text-stone-500">
                     <span className="font-arabic">{prayer.arabicName}</span>
                     {prayer.id === 'sunrise' && (
                       <>
                         <span aria-hidden="true">·</span>
-                        <span>Dhuha window opens</span>
+                        <span>Dhuha opens</span>
                       </>
                     )}
                     {isNext && (
                       <>
                         <span aria-hidden="true">·</span>
                         <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
-                          Next upcoming prayer
+                          Next prayer
                         </span>
                       </>
                     )}
@@ -107,7 +107,7 @@ export const PrayerList: React.FC<PrayerListProps> = ({ prayers, asrMadhab }) =>
               </div>
 
               {/* Right Slot: Formatted Time + Status Tag */}
-              <div className="text-right">
+              <div className="text-right shrink-0">
                 <div
                   className={`text-lg md:text-xl font-bold tabular-nums tracking-tight ${
                     isNext

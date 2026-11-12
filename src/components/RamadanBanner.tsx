@@ -24,20 +24,20 @@ export const RamadanBanner: React.FC<RamadanBannerProps> = ({
 }) => {
   if (!isRamadanActive) {
     return (
-      <div className="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-emerald-50 dark:bg-stone-900 border border-emerald-200/70 dark:border-stone-800 text-xs text-emerald-800 dark:text-emerald-300">
-        <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-emerald-50 dark:bg-stone-900 border border-emerald-200/70 dark:border-stone-800 text-xs text-emerald-800 dark:text-emerald-300">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 min-w-0">
           <Moon className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
           <span>
             Ramadan Mode: <strong className="font-medium text-emerald-900 dark:text-white">Auto (Off)</strong>
           </span>
-          <span aria-hidden="true" className="text-emerald-300 dark:text-stone-700">·</span>
+          <span aria-hidden="true" className="hidden sm:inline text-emerald-300 dark:text-stone-700">·</span>
           <span className="hidden sm:inline text-emerald-600 dark:text-stone-400">
             Suhoor ends at Fajr, Iftar at Maghrib
           </span>
         </div>
         <button
           onClick={onToggleRamadanPreview}
-          className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-emerald-200 underline underline-offset-2 shrink-0 py-1"
+          className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-emerald-200 underline underline-offset-2 shrink-0 py-1 cursor-pointer"
         >
           Preview Ramadan Timings
         </button>

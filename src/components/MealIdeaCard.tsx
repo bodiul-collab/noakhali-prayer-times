@@ -41,10 +41,10 @@ export const MealIdeaCard: React.FC<MealIdeaCardProps> = ({
   const currentPeriod = periodLabels[recipe.period] || periodLabels.dinner;
 
   return (
-    <div className="rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 shadow-sm p-5 md:p-6 transition-all">
+    <div className="rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 shadow-sm p-4 sm:p-5 md:p-6 transition-all">
       {/* Header: Zero-Pill Discipline */}
-      <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-stone-800">
-        <div className="flex items-center gap-2 text-xs">
+      <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100 dark:border-stone-800">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs min-w-0">
           <UtensilsCrossed className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
           <span className="font-bold text-slate-900 dark:text-white uppercase tracking-wider">
             Today's Meal Idea

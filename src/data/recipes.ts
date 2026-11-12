@@ -102,7 +102,7 @@ export const BANGLADESHI_RECIPES: BangladeshiRecipe[] = [
     description: "Jumbo tiger prawns simmered in silky coconut milk infused with whole spices, mild green chilies, and a touch of clarified butter.",
     ingredients: ["Jumbo head-on prawns", "Thick coconut milk", "Onion paste", "Green cardamom & cloves", "Pinch of sugar", "Pure ghee"],
     tips: "Noakhali's coastal heritage shines through the balance of rich coconut milk and sweet prawns.",
-    websiteUrl: "https://www.noakhalikitchen.com/recipes/bangladeshi-spiced-shrimp-and-green-bean-stir-fry"
+    websiteUrl: "https://www.noakhalikitchen.com/recipes/golda-chingri-malai-curry"
   },
   {
     id: "morog-polao",

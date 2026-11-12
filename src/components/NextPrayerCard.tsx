@@ -94,22 +94,22 @@ export const NextPrayerCard: React.FC<NextPrayerCardProps> = ({
       </div>
 
       {/* Main Focus: Next Prayer Title & Rollover Tag */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div>
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-300/90 mb-1">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-semibold uppercase tracking-wider text-emerald-300/90 mb-1">
             <span>{nextPrayer.isTomorrow ? 'Next Prayer (Tomorrow)' : 'Next Prayer'}</span>
             <span aria-hidden="true">·</span>
             <span>পরবর্তী নামাজ</span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="p-3 rounded-2xl bg-emerald-800/60 border border-emerald-700/60 shadow-inner">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="p-2.5 sm:p-3 rounded-2xl bg-emerald-800/60 border border-emerald-700/60 shadow-inner shrink-0">
               {PRAYER_ICONS[nextPrayer.id] || <Sun className="w-6 h-6 text-amber-300" />}
             </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white flex items-baseline gap-2.5">
+            <div className="min-w-0">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
                 <span>{nextPrayer.nameEn}</span>
-                <span className="text-xl md:text-2xl font-bangla font-semibold text-emerald-300">
+                <span className="text-lg sm:text-xl md:text-2xl font-bangla font-semibold text-emerald-300">
                   {nextPrayer.nameBn}
                 </span>
               </h2>

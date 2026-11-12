@@ -182,7 +182,7 @@ export const DualCalendarCard: React.FC<DualCalendarCardProps> = ({
     <section
       id="calendar-section"
       aria-label="English and Arabic Calendar"
-      className="rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 shadow-xs p-4 sm:p-6 space-y-4 transition-colors"
+      className="scroll-mt-28 rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 shadow-xs p-3.5 sm:p-6 space-y-4 transition-colors overflow-hidden"
     >
       {/* Header Row */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100 dark:border-stone-800">

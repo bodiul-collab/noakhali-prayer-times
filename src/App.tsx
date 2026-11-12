@@ -275,6 +275,11 @@ export default function App() {
     const el = document.getElementById('qibla-section');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      handleNavigate('/');
+      setTimeout(() => {
+        document.getElementById('qibla-section')?.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
     }
   };
 
@@ -282,6 +287,11 @@ export default function App() {
     const el = document.getElementById('calendar-section');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      handleNavigate('/');
+      setTimeout(() => {
+        document.getElementById('calendar-section')?.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
     }
   };
 
@@ -358,7 +368,7 @@ export default function App() {
   }, [isCityPage, isIndexPage]);
 
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-stone-950 text-slate-900 dark:text-stone-100 flex flex-col font-sans transition-colors duration-200">
+    <div className="min-h-screen w-full min-w-0 overflow-x-clip bg-stone-50 dark:bg-stone-950 text-slate-900 dark:text-stone-100 flex flex-col font-sans transition-colors duration-200">
       {/* Offline Toast Banner */}
       {!isOnline && (
         <div className="bg-amber-600 text-white px-4 py-2 text-xs font-medium flex items-center justify-center gap-2 sticky top-0 z-40 shadow-sm">
@@ -378,6 +388,7 @@ export default function App() {
           timeZone: targetCity.timeZone,
         } : location}
         isDarkMode={isDarkMode}
+        currentPath={currentPath}
         onToggleTheme={toggleTheme}
         onOpenLocationPicker={() => setIsCityPickerOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
@@ -389,7 +400,7 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-4xl w-full mx-auto px-4 py-5 md:py-8 space-y-6">
+      <main className="flex-1 max-w-4xl w-full min-w-0 mx-auto px-3 sm:px-4 py-4 sm:py-6 md:py-8 space-y-5 sm:space-y-6">
         {/* ROUTE 1: Specific City Page */}
         {isCityPage && targetCity && (
           <CityPage
@@ -442,21 +453,21 @@ export default function App() {
         {!isCityPage && !isIndexPage && (
           <>
             {/* Quick Location Bar with Switcher & Privacy Guarantee */}
-            <div className="flex flex-wrap items-center justify-between gap-2.5 px-4 py-3 rounded-2xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 text-xs shadow-xs">
-              <div className="flex items-center gap-2 text-slate-700 dark:text-stone-300">
+            <div className="flex flex-wrap items-center justify-between gap-2 px-3.5 sm:px-4 py-3 rounded-2xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 text-xs shadow-xs">
+              <div className="flex items-center gap-2 text-slate-700 dark:text-stone-300 min-w-0">
                 <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                <span>
+                <span className="break-words">
                   Prayer times for <strong className="text-slate-900 dark:text-white font-semibold">{location.name}</strong>
                   {location.stateCode ? ` (${location.stateCode})` : ''}
                 </span>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
                 <button
                   onClick={() => setIsCityPickerOpen(true)}
                   className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 underline underline-offset-2 py-1 cursor-pointer"
                 >
-                  Change City (500+ Worldwide)
+                  Change City (500+)
                 </button>
                 <span aria-hidden="true" className="text-slate-300 dark:text-stone-700">·</span>
                 <button

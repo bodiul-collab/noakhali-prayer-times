@@ -124,10 +124,10 @@ export const QiblaCompass: React.FC<QiblaCompassProps> = ({
   ];
 
   return (
-    <div id="qibla-section" className="rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 shadow-xs p-5 md:p-6 transition-colors">
+    <div id="qibla-section" className="scroll-mt-28 rounded-3xl bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-800 shadow-xs p-4 sm:p-5 md:p-6 transition-colors overflow-hidden">
       {/* Header with Title and Bearing Summary */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-slate-100 dark:border-stone-800">
-        <div>
+        <div className="min-w-0">
           <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <Compass className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             <span>Qibla Direction</span>
@@ -352,7 +352,7 @@ export const QiblaCompass: React.FC<QiblaCompassProps> = ({
         </div>
 
         {/* Right Explanatory Column & Controls */}
-        <div className="flex-1 max-w-md space-y-4">
+        <div className="flex-1 w-full min-w-0 max-w-md space-y-4">
           {/* How to use & Direction summary */}
           <div className="p-4 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40 space-y-2">
             <div className="flex items-start gap-2.5">
